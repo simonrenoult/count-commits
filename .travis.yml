@@ -1,10 +1,10 @@
 language: node_js
 
 node_js:
-  - "8.9"
+  - "lts/*"
 
 script:
-  - npm test
+  - yarn test
   
 after_success:
-  - npm run coverage
+  - yarn coverage
