@@ -1,6 +1,6 @@
 {
   "name": "count-commits",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "Count commits per file or directory",
   "main": "index.js",
   "repository": "git@github.com:simonrenoult/count-commits.git",
