@@ -17,7 +17,7 @@ See LICENSE.txt
 [style-image]: https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square
 [style-url]: https://prettier.io/
 
-[coverage-image]: https://img.shields.io/codecov/c/github/simonrenoult/count-commits.svg?style=flat-square
+[coverage-image]: https://img.shields.io/coveralls/c/github/simonrenoult/count-commits.svg?style=flat-square
 [coverage-url]: https://codecov.io/gh/simonrenoult/count-commits/branch/master
 
 [npm-image]: https://img.shields.io/npm/v/count-commits.svg?style=flat-square
