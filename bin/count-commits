@@ -1,0 +1,25 @@
+#!/usr/bin/env node
+
+const fs = require("fs");
+const isGit = require("is-git-repository");
+const { dirname } = require("path");
+const { countCommits } = require("../");
+
+const args = process.argv.slice(2);
+if (!args.length) {
+  throw new Error("Argument 'path' must be provided.");
+}
+
+const pathToLocation = args[0];
+if (fs.lstatSync(pathToLocation).isFile() === false) {
+  throw new Error("Argument 'path' must lead to a file.");
+}
+
+if (isGit(dirname(pathToLocation)) === false) {
+  throw new Error("Argument 'path' must be contained in a Git repository.");
+}
+
+(async () => {
+  const commitsCount = await countCommits(pathToLocation);
+  process.stdout.write(commitsCount);
+})();
