@@ -11,7 +11,7 @@ async function countCommits(fileLocation) {
   const file = basename(fileLocation);
 
   const { stdout, stderr } = await promisify(exec)(
-    `git -C ${directory} log --oneline --first-parent ${file} | wc -l`
+    `git -C ${directory} log -m --oneline --follow --first-parent ${file} | wc -l`
   );
 
   if (stderr) throw stderr;
