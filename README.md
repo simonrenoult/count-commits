@@ -1,11 +1,34 @@
 # count-commits
 
-> Count commits per file or directory.
+> Count commits per file.
 
 [![Build Status][travis-image]][travis-url]
 [![Coverage Status][coverage-image]][coverage-url]
 [![Style Status][style-image]][style-url]
 [![NPM Version][npm-image]][npm-url]
+
+## Install
+
+```sh
+$ npm install --global count-commits
+```
+
+## Usage
+
+### CLI
+
+```sh
+$ count-commits /path/to/file.js
+14
+```
+
+### API
+
+```js
+const { countCommits } = require("count-commits");
+const count = await countCommits("/path/to/file.js");
+// Do something with <count>
+```
 
 ## License
 

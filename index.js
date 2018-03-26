@@ -1,5 +1,5 @@
 const { exec } = require("child_process");
-const { dirname, basename } = require("path");
+const { basename, dirname } = require("path");
 const { promisify } = require("util");
 
 module.exports = {
@@ -16,5 +16,5 @@ async function countCommits(fileLocation) {
 
   if (stderr) throw stderr;
 
-  return stdout.trim();
+  return parseInt(stdout.trim(), 10);
 }
