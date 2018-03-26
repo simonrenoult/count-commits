@@ -16,10 +16,11 @@
     "lint": "eslint .",
     "pretest": "npm run lint",
     "test": "nyc mocha",
-    "coverage": "nyc report --reporter=text-lcov | coveralls"
+    "coverage": "nyc report --reporter=text-lcov > coverage.lcov && codecov"
   },
   "devDependencies": {
     "chai": "^4.1.2",
+    "codecov": "^3.0.0",
     "coveralls": "^3.0.0",
     "eslint": "^4.19.1",
     "eslint-config-prettier": "^2.8.0",
